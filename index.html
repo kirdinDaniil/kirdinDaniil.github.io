@@ -15,7 +15,7 @@
             <li><a href="#">Важные события</a></li>
             <li><a href="#">Локации</a></li>
             <li><a href="#">Игроки</a></li>
-            <li>Общая информация</li>
+            <li>> Общая информация</li>
         </ul>
     </nav>
 </header>
@@ -24,10 +24,11 @@
     <section>
         <h4>Что это вообще такое и с чем это едят?</h4>
         <p>
-            Начну с того что вообще такое <b>DnD</b>. <strong>Dungeons & Dragons (D&D, DnD; Подземелья и драконы)</strong> - настольная
+            Начну с того что вообще такое <b>DnD</b>. <strong>Dungeons & Dragons (D&D, DnD; Подземелья и
+            драконы)</strong> - настольная
             ролевая игра в жанре фэнтези, разработанная Гэри Гайгэксом и Дэйвом Арнесоном. Впервые была издана
-            в 1974 году компанией «Tactical Studies Rules, Inc.» (TSR). С 1997 года издаётся компанией «Wizards
-            of the Coast» (WotC).
+            в 1974 году компанией «<i>Tactical Studies Rules, Inc.</i>» (TSR). С 1997 года издаётся компанией «<i>Wizards
+            of the Coast</i>» (WotC).
             <br>
         </p>
         <p>
@@ -37,13 +38,16 @@
             описывает окружающую среду и происходящие в ней события.
             В течение игры каждый участник задаёт действия для своего персонажа, а результаты действий
             определяются мастером в соответствии с правилами. Случайные события моделируются броском кубика.
-            Иногда решения мастера могут не соответствовать правилам. Это является Золотым правилом игры: «<i>ДМ всегда прав</i>»,
-            так называемым «<i>мастерским произволом</i>».
+            Иногда решения мастера могут не соответствовать правилам. Это является Золотым правилом игры: «<i>ДМ всегда
+            прав</i>»,
+            так называемым «<i>мастерским произволом</i>».<br>
+            Формула успеха днд: Успех = фантазия<sup>2</sup> * e<sup>человеческий фактор</sup>
             <br>
         </p>
         <p>
             Оказавшись затянутым в этот круговорот DnD и проведя более года на месте игрока, я решил попробовать
-            себя в роли «<em>мастера</em>», из-за чего мне пришлось придумывать свой фэнтезийный мир с продуманной историей, все во благо игроков.
+            себя в роли «<em>мастера</em>», из-за чего мне пришлось придумывать свой фэнтезийный мир с продуманной
+            историей, все во благо игроков.
             И дабы упорядочить и скомпоновать сведения придуманном мной мире и будет создан данный сайт!
         </p>
     </section>
@@ -54,7 +58,7 @@
           /           ".
           `            l
           |'._  ,._ l/"\
-          |  _J<__/.v._/
+          |  _J&lt__/.v._/
            \( ,~._,,,,-)
             `-\' \`,,j|
                \_,____J
@@ -88,12 +92,65 @@
  __\\\     ( .-\           .--'    ``--../..'      '-..
    `'''`----`\\\\ .....--'''
               \\\\                                    ''
-    </pre>
+        </pre>
     </aside>
-
+    <h2>DnD-related things</h2>
+    <section>
+        <h4>Коротко DnD:</h4>
+        <p>
+            <q>
+                DM: So you've arrived and been assigned rooms. What are you gonna do?<br>
+                Friend 1: Sleep<br>
+                Friend 2: Sleep<br>
+                Friend 3: Read in my room<br>
+                Friend 4: Steal cereal from the kitchen and eat it in my room<br>
+                Me: Go outside and dig in the dirt<br>
+                Friend 5: *sigh* Whatever I need to do to advance the plot *All burst out laughing*<br>
+                DM: Okay so you go into the obviously creepy office like a PROPER adventurer<br>
+            </q>
+        </p>
+        <h4>Вырезка из написанного мной консольного приложения для создания персонажа</h4>
+        <pre><code>
+         internal static List&ltDNDCharacter> CharacterList { get; set; }
+        internal static Log log {get; set;}
+        public MainMenu()
+        {
+            CharacterList = new List&ltDNDCharacter>();
+            log = new Log();
+            log.SetCharactersFromLog();
+        }
+        public void SaveChanges()
+        {
+            foreach (var character in CharacterList)
+            {
+                character.SaveCharacter();
+            }
+            log.GetLog();
+        }
+        public void CreateCharacterMenu()
+        {
+            DNDCharacter NewCharacter = new DNDCharacter();
+            Console.ForegroundColor = ConsoleColor.Green;
+            Console.Clear();
+            Console.WriteLine(
+                "\r\n▒█▀▀█ ▒█▀▀█ ▒█▀▀▀ ░█▀▀█ ▀▀█▀▀ ▒█▀▀▀   ▒█░░▒█ ▒█▀▀▀█ ▒█░▒█ ▒█▀▀█   ▒█▀▀▄ ▒█▀▀▀ ▒█▀▀▀█ ▀▀█▀▀ ▀█▀ ▒█▄░▒█ ▒█░░▒█ " +
+                "\r\n▒█░░░ ▒█▄▄▀ ▒█▀▀▀ ▒█▄▄█ ░▒█░░ ▒█▀▀▀   ▒█▄▄▄█ ▒█░░▒█ ▒█░▒█ ▒█▄▄▀   ▒█░▒█ ▒█▀▀▀ ░▀▀▀▄▄ ░▒█░░ ▒█░ ▒█▒█▒█ ▒█▄▄▄█ " +
+                "\r\n▒█▄▄█ ▒█░▒█ ▒█▄▄▄ ▒█░▒█ ░▒█░░ ▒█▄▄▄   ░░▒█░░ ▒█▄▄▄█ ░▀▄▄▀ ▒█░▒█   ▒█▄▄▀ ▒█▄▄▄ ▒█▄▄▄█ ░▒█░░ ▄█▄ ▒█░░▀█ ░░▒█░░");
+            Console.ForegroundColor = ConsoleColor.Red;
+            Console.WriteLine("Текст вводить в строку, подтверждение с помощью кнопки ENTER\n");
+            Console.ForegroundColor= ConsoleColor.White;
+            Console.WriteLine("Введите имя персонажа");
+            string tmp = Console.ReadLine();
+            </code></pre>
+    </section>
 </main>
 <footer>
-
+    <ul>
+        <h4>Связь</h4>
+        <li><a href="https://t.me/kardanls">telegram</a></li>
+        <li><a href="https://vk.com/aamaiorus">vk</a></li>
+        <li><a href="https://github.com/kirdinDaniil">github</a></li>
+    </ul>
 </footer>
 </body>
 </html>
