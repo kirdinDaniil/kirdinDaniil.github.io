@@ -2,25 +2,25 @@
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
-    <link href="outlines.css" rel="stylesheet">
+    <link href="CSS/style.css" rel="stylesheet">
     <title>Путеводитель игрока</title>
 </head>
 <body>
 <header>
-    <h1>Путеводитель игрока</h1>
+    <img class="logo" src="Source/logo.png" alt="Konstantin`s logo">
+    <h1 id="table">Путеводитель игрока</h1>
     <nav>
-        <ul>
-            <li><a href="#">Карта мира</a></li>
-            <li><a href="#">Персонажи</a></li>
-            <li><a href="#">Важные события</a></li>
-            <li><a href="#">Локации</a></li>
-            <li><a href="#">Игроки</a></li>
-            <li>> Общая информация</li>
-        </ul>
+        <a href="#" class="navi_buttons_active">Карта мира</a>
+        <a href="#" class="navi_buttons_active">Персонажи</a>
+        <a href="#" class="navi_buttons_active">Важные события</a>
+        <a href="#" class="navi_buttons_active">Локации</a>
+        <a href="#" class="navi_buttons_active">Игроки</a>
+        <a href="#" class="navi_buttons_disable">Общая информация</a>
     </nav>
 </header>
 <main>
-    <h3>А теперь о сайте</h3>
+    <br>
+    <h2>А теперь о сайте</h2>
     <section>
         <h4>Что это вообще такое и с чем это едят?</h4>
         <p>
@@ -40,8 +40,7 @@
             определяются мастером в соответствии с правилами. Случайные события моделируются броском кубика.
             Иногда решения мастера могут не соответствовать правилам. Это является Золотым правилом игры: «<i>ДМ всегда
             прав</i>»,
-            так называемым «<i>мастерским произволом</i>».<br>
-            Формула успеха днд: Успех = фантазия<sup>2</sup> * e<sup>человеческий фактор</sup>
+            так называемым «<i>мастерским произволом</i>».
             <br>
         </p>
         <p>
@@ -51,64 +50,23 @@
             И дабы упорядочить и скомпоновать сведения придуманном мной мире и будет создан данный сайт!
         </p>
     </section>
-    <aside>
-        <h3>Прикольный скелет</h3>
-        <pre>
-           _..--""---.
-          /           ".
-          `            l
-          |'._  ,._ l/"\
-          |  _J&lt__/.v._/
-           \( ,~._,,,,-)
-            `-\' \`,,j|
-               \_,____J
-          .--.__)--(__.--.
-         /  `-----..--'. j
-         '.- '`--` `--' \\
-        //  '`---'`  `-' \\
-       //   '`----'`.-.-' \\
-     _//     `--- -'   \' | \________
-    |  |         ) (      `.__.---- -'\
-     \7          \`-(               74\\\
-     ||       _  /`-(               l|//7__
-     |l    ('  `-)-/_.--.          f''` -.-"|
-     |\     l\_  `-'    .'         |     |  |
-     llJ   _ _)J--._.-('           |     |  l
-     |||( ( '_)_  .l   ". _    ..__I     |  L
-     ^\\\||`'   "   '"-. " )''`'---'     L.-'`-.._
-          \ |           ) /.              ``'`-.._``-.
-          l l          / / |                      |''|
-           " \        / /   "-..__                |  |
-           | |       / /          1       ,- t-...J_.'
-           | |      / /           |       |  |
-           J  \  /"  (            l       |  |
-           | ().'`-()/            |       |  |
-          _.-"_.____/             l       l.-l
-      _.-"_.+"|                  /        \.  \
-/"\.-"_.-"  | |                 /          \   \
-\_   "      | |                1            | `'|
-  |ll       | |                |            i   |
-  \\\       |-\               \j ..          L,,'. `/
- __\\\     ( .-\           .--'    ``--../..'      '-..
-   `'''`----`\\\\ .....--'''
-              \\\\                                    ''
-        </pre>
-    </aside>
     <h2>DnD-related things</h2>
     <section>
         <h4>Коротко DnD:</h4>
-        <p>
-            <q>
-                DM: So you've arrived and been assigned rooms. What are you gonna do?<br>
-                Friend 1: Sleep<br>
-                Friend 2: Sleep<br>
-                Friend 3: Read in my room<br>
-                Friend 4: Steal cereal from the kitchen and eat it in my room<br>
-                Me: Go outside and dig in the dirt<br>
-                Friend 5: *sigh* Whatever I need to do to advance the plot *All burst out laughing*<br>
-                DM: Okay so you go into the obviously creepy office like a PROPER adventurer<br>
-            </q>
-        </p>
+        <div class="quote">
+            <p>
+                <q>
+                    DM: So you've arrived and been assigned rooms. What are you gonna do?<br>
+                    Friend 1: Sleep<br>
+                    Friend 2: Sleep<br>
+                    Friend 3: Read in my room<br>
+                    Friend 4: Steal cereal from the kitchen and eat it in my room<br>
+                    Me: Go outside and dig in the dirt<br>
+                    Friend 5: *sigh* Whatever I need to do to advance the plot *All burst out laughing*<br>
+                    DM: Okay so you go into the obviously creepy office like a PROPER adventurer<br>
+                </q>
+            </p>
+        </div>
         <h4>Вырезка из написанного мной консольного приложения для создания персонажа</h4>
         <pre><code>
          internal static List&ltDNDCharacter> CharacterList { get; set; }
@@ -145,12 +103,9 @@
     </section>
 </main>
 <footer>
-    <ul>
-        <h4>Связь</h4>
-        <li><a href="https://t.me/kardanls">telegram</a></li>
-        <li><a href="https://vk.com/aamaiorus">vk</a></li>
-        <li><a href="https://github.com/kirdinDaniil">github</a></li>
-    </ul>
+    <img class="logo_github" src="Source/github_logo.png" alt="telegram">
+    <img class="logo_tg" src="Source/tg_logo.png" alt="tg">
+    <img class="logo_vk" src="Source/vk_logo.png" alt="vk">
 </footer>
 </body>
 </html>
