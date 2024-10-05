@@ -56,7 +56,7 @@ p {
 }
 
 body {
-    background-color: #606366;
+    background-color: darkgray;
 }
 
 header {
@@ -75,7 +75,7 @@ header {
 
 #table {
     font-family: "Roboto", sans-serif;
-    font-size: 30px;
+    font-size: 40px;
     padding-top: 5%;
     color: #1E1E1E;
     padding-left: 1%;
@@ -85,7 +85,7 @@ nav {
     display: flex;
     margin-top: 5%;
     margin-left: auto;
-    margin-right: 2%;
+    margin-right: 3%;
 }
 
 
@@ -127,7 +127,9 @@ nav {
 
 main {
     font-family: "Roboto", sans-serif;
+    font-size: large;
     padding: 1%;
+    word-spacing: 2px;
 }
 
 pre, .quote {
@@ -138,6 +140,8 @@ pre, .quote {
     box-shadow: 10px 5px 5px red;
     margin: 1%;
     padding: 1%;
+    border-radius: 10px;
+    word-spacing: 2px;
 }
 
 code {
@@ -147,10 +151,19 @@ code {
 h2 {
     font-weight: bold;
     font-size: 30px;
+    border-radius: 10px;
+    background-color: #1E1E1E;
+    width: max-content;
+    height: max-content;
+    padding: 5px;
+    color: white;
+    box-shadow: 10px 5px 5px red;
+    margin: 5px 5px 10px;
 }
 
 i {
     font-style: italic;
+    text-transform: capitalize;
 }
 
 footer {
@@ -170,3 +183,8 @@ footer {
     height: 3.5%;
     width: 3.5%;
 }
+
+p {
+    width: 95%;
+}
+
