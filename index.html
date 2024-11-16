@@ -4,18 +4,19 @@
     <meta charset="UTF-8">
     <link href="CSS/style.css" rel="stylesheet">
     <title>Путеводитель игрока</title>
+    <script src="JS/activeLink.js"></script>
+    <script src="JS/pageLoadTime.js"></script>
 </head>
 <body>
 <header>
-    <img class="logo" src="Source/logo.png" alt="Konstantin`s logo">
+    <img class="logo" src="CSS/Source/logo.png" alt="Konstantin`s logo">
     <h1 id="table">Путеводитель игрока</h1>
     <nav>
-        <a href="#" class="navi_buttons_active">Карта мира</a>
-        <a href="#" class="navi_buttons_active">Персонажи</a>
-        <a href="#" class="navi_buttons_active">Важные события</a>
-        <a href="#" class="navi_buttons_active">Локации</a>
-        <a href="#" class="navi_buttons_active">Игроки</a>
-        <a href="#" class="navi_buttons_disable">Общая информация</a>
+        <a href="map.html">Карта мира</a>
+        <a href="characters.html">Персонажи</a>
+        <a href="camp.html">Лагерь</a>
+        <a href="players.html">Игроки</a>
+        <a href="index.html" class="active">Общая информация</a>
     </nav>
 </header>
 <main>
@@ -49,6 +50,7 @@
             историей, все во благо игроков.
             И дабы упорядочить и скомпоновать сведения придуманном мной мире и будет создан данный сайт!
         </p>
+
     </section>
     <h2>DnD-related things</h2>
     <section>
@@ -103,10 +105,12 @@
     </section>
 </main>
 <footer>
-    <a href="#table"><div id="fixed">Вверх</div></a>
-    <img class="logo_github" src="Source/github_logo.png" alt="telegram">
-    <img class="logo_tg" src="Source/tg_logo.png" alt="tg">
-    <img class="logo_vk" src="Source/vk_logo.png" alt="vk">
+    <a href="#table">
+        <div id="fixed">Вверх</div>
+    </a>
+    <img class="logo_github" src="CSS/Source/github_logo.png" alt="telegram">
+    <img class="logo_tg" src="CSS/Source/tg_logo.png" alt="tg">
+    <img class="logo_vk" src="CSS/Source/vk_logo.png" alt="vk">
 </footer>
 </body>
 </html>
