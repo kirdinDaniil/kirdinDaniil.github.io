@@ -26,12 +26,12 @@ document.addEventListener('DOMContentLoaded', () => {
         comments.forEach(comment => {
             const commentEl = document.createElement('div');
             commentEl.classList.add('comment');
-
-            commentEl.innerHTML = `
-                        <h4>${comment.name} (${comment.email})</h4>
-                        <p>${comment.body}</p>
-                    `;
-
+            const header = document.createElement('h4');
+            header.textContent = comment.name;
+            const body = document.createElement('p');
+            body.textContent = comment.body;
+            commentEl.appendChild(header);
+            commentEl.appendChild(body);
             commentsContainer.appendChild(commentEl);
         });
     }
