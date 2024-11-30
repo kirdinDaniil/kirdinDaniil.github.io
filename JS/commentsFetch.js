@@ -2,7 +2,6 @@ document.addEventListener('DOMContentLoaded', () => {
     const commentsContainer = document.getElementById('comments_container');
     const preloader = document.getElementById('preloader');
 
-    // Fetch Comments
     fetchComments();
 
     function fetchComments() {
@@ -40,7 +39,7 @@ document.addEventListener('DOMContentLoaded', () => {
     function showError(message) {
         const errorEl = document.createElement('div');
         errorEl.classList.add('error');
-        errorEl.textContent = `⚠️ Something went wrong: ${message}`;
+        errorEl.textContent = `Что-то пошло не так: ${message}`;
         commentsContainer.appendChild(errorEl);
     }
 });
