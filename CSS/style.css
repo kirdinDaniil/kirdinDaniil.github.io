@@ -261,6 +261,43 @@ h4 {
     height: 60%;
 }
 
+#initiativeForm, .table_section {
+    background-color: #1E1E1E;
+    width: max-content;
+    padding: 1%;
+    color: white;
+    border-radius: 10px;
+    margin: 2%;
+    box-shadow: 7px 3px 3px red;
+}
+
+.table_section {
+    align-content: center;
+    display: block
+}
+
+.table_section th, .table_section td {
+    align-content: center;
+    border: 1px solid red;
+    align-self: center;
+    padding: 2%;
+    border-radius: 10px;
+}
+
+.comment {
+    background-color: #1E1E1E;
+    width: 50%;
+    padding: 1%;
+    color: white;
+    border-radius: 10px;
+    margin: 1%;
+}
+
+.comment h4 {
+    color: red;
+    padding: 1%;
+}
+
 #fixed{
     display: inline-block;
     font-family: "Roboto", sans-serif;

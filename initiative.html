@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <link href="CSS/style.css" rel="stylesheet">
+    <title>Путеводитель игрока</title>
+    <script src="JS/activeLink.js"></script>
+    <script src="JS/pageLoadTime.js"></script>
+    <script src="JS/initiative.js"></script>
+</head>
+<body>
+<header>
+    <img class="logo" src="CSS/Source/logo.png" alt="Konstantin`s logo">
+    <h1 id="table">Путеводитель игрока</h1>
+    <nav>
+        <a href="map.html">Карта мира</a>
+        <a href="characters.html">Персонажи</a>
+        <a href="camp.html">Лагерь</a>
+        <a href="players.html">Игроки</a>
+        <a href="index.html">Общая информация</a>
+        <a href="initiative.html">Калькулятор инициативы</a>
+    </nav>
+</header>
+<main>
+    <br>
+    <h2>Создайте таблицу инициативы для боя</h2>
+    <form id="initiativeForm" class="full-width">
+        <label for="participants" class="label_style">Количество участников:</label>
+        <input type="number" id="participants" name="participants" min="1" max="20"
+               placeholder="Сколько хочешь, но не больше 20. Монстр..." required class="form-input">
+        <br><br>
+        <label for="initiativeDice" class="label_style">Тип броска инициативы:</label>
+        <select id="initiativeDice" name="initiativeDice" class="form-input">
+            <option value="d20">d20</option>
+            <option value="d12">d12</option>
+            <option value="d10">d10</option>
+            <option value="d8">d8</option>
+        </select>
+        <br><br>
+        <label for="includeHealth" class="label_style">Добавить колонку для здоровья?</label>
+        <input type="checkbox" id="includeHealth" name="includeHealth" class="form-checkbox">
+        <br><br>
+        <button type="submit" class="big-button">Сгенерировать таблицу</button>
+    </form>
+
+    <div id="tableContainer" class="table-section"></div>
+
+</main>
+<footer>
+    <a href="#table">
+        <div id="fixed">Вверх</div>
+    </a>
+    <img class="logo_github" src="CSS/Source/github_logo.png" alt="telegram">
+    <img class="logo_tg" src="CSS/Source/tg_logo.png" alt="tg">
+    <img class="logo_vk" src="CSS/Source/vk_logo.png" alt="vk">
+</footer>
+</body>
+</html>
