@@ -3,7 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <link href="CSS/style.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
     <title>Путеводитель игрока</title>
+    <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
     <script src="JS/activeLink.js"></script>
     <script src="JS/pageLoadTime.js"></script>
 </head>
@@ -30,7 +32,13 @@
             На данный момент является одним из стратегов, находящихся в авангарде боевых действий.
             Как его описывают среди солдат - "гениальный алкаш, изворотливый как уж".
         </p>
-        <img src="CSS/Source/cid.webp" alt="Cid" >
+        <div class="carousel"
+             data-flickity='{ "imagesLoaded": true, "percentPosition": false }'>
+            <img src="CSS/Source/cid.webp" alt="Cid" />
+            <img src="CSS/Source/cid2.jpg" alt="Cid" />
+            <img src="CSS/Source/cid3.jpg" alt="Cid" />
+        </div>
+
     </div>
 
     <div class="character_info">
